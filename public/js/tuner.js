@@ -174,14 +174,6 @@ function autoCorrelate( buf, sampleRate ) {
 			}
 		} else if (foundGoodCorrelation) {
 			// short-circuit - we found a good correlation, then a bad one, so we'd just be seeing copies from here.
-			// Now we need to tweak the offset - by interpolating between the values to the left and right of the
-			// best offset, and shifting it a bit.  This is complex, and HACKY in this code (happy to take PRs!) -
-			// we need to do a curve fit on correlations[] around best_offset in order to better determine precise
-			// (anti-aliased) offset.
-
-			// we know best_offset >=1,
-			// since foundGoodCorrelation cannot go to true until the second pass (offset=1), and
-			// we can't drop into this clause until the following pass (else if).
 			var shift = (correlations[best_offset+1] - correlations[best_offset-1])/correlations[best_offset];
 			return sampleRate/(best_offset+(8*shift));
 		}
