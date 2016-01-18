@@ -188,11 +188,9 @@ function autoCorrelate( buf, sampleRate ) {
 		lastCorrelation = correlation;
 	}
 	if (best_correlation > 0.01) {
-		// console.log("f = " + sampleRate/best_offset + "Hz (rms: " + rms + " confidence: " + best_correlation + ")")
-		return sampleRate/best_offset;
+				return sampleRate/best_offset;
 	}
 	return -1;
-//	var best_frequency = sampleRate/best_offset;
 }
 
 function updatePitch( time ) {
