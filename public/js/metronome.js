@@ -5,7 +5,7 @@ function setSelected(value){
 var interval = 0;
 var bpm = 0
 
-var sound = document.getElementById("tomtom");
+var sound = document.getElementById("click");
 
 function toggleSidebar() {
     $('.ui.sidebar')
@@ -14,7 +14,7 @@ function toggleSidebar() {
 }
 
 function metronome() {
-    clearInterval(interval);
+    stop();
     bpm = $('.metronome-input').val();
     interval = setInterval(function() {
         // Play sound bpm times per minute
