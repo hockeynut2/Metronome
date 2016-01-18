@@ -1,0 +1,30 @@
+<h1 style="text-align: center">Metronome</h1>
+<div style="text-align: center">
+<div class="ui input">
+  <input type="text" placeholder="Enter beats per minute" class="metronome-input">
+</div>
+<button class="ui button" id="go" onclick="metronome()">Go</button>
+  <button class="ui button" id="stop" onclick="stop()" style="margin-bottom: 50px">Stop</button></div>
+
+  <audio id="click" src="sounds/click.wav" autostart="false" ></audio>
+  <audio id="tomtom" src="sounds/tomtom.wav" autostart="false" ></audio>
+  <audio id="snare" src="sounds/snare.wav" autostart="false" ></audio>
+  <audio id="kick" src="sounds/kick.wav" autostart="false" ></audio>
+  <div>Volume:</div>
+  <input type="range" id="volume" min="0" max="1" step="0.05" />
+  <br>
+  <div class="ui compact menu" style="text-align: center">
+  <div class="ui simple selection dropdown item" id="dropdown">
+
+    <div class="default text">Click</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item" onclick="changeSound('click')">Click</div>
+      <div class="item" onclick="changeSound('tomtom')">Tom Tom</div>
+      <div class="item" onclick="changeSound('snare')">Snare</div>
+      <div class="item" onclick="changeSound('kick')">Kick</div>
+    </div>
+  </div>
+  </div>
+<script src="js/metronome.js"></script>
+<!-- <script src="js/volume_slider.js"></script> -->
