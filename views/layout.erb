@@ -1,0 +1,28 @@
+<head lang="en">
+  <meta charset="UTF-8">
+  <link type="image/icon" rel="shortcut icon" href="icon.png">
+  <title>Metronome and Tuner</title>
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/app.css">
+</head>
+
+<body>
+<div class="ui sidebar thin inverted vertical menu">
+  <a class="item" href="/">
+    Metronome
+  </a>
+  <a class="item" href="/tuner">
+    Tuner/Pitch Detector
+  </a>
+</div>
+<div class="pusher">
+  <button class="ui large icon button" tabindex="0" onclick="toggleSidebar()">
+    <i class="sidebar icon"></i>
+  </button>
+  <div style="text-align: center">
+    <%= yield %>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+</div>
+</body>
