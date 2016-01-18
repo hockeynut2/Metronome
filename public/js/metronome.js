@@ -7,6 +7,8 @@ var bpm = 0
 
 var sound = document.getElementById("click");
 
+var slider = document.getElementById("volume");
+
 function toggleSidebar() {
     $('.ui.sidebar')
         .sidebar('toggle')
@@ -35,9 +37,8 @@ function beep() {
 function changeSound(type) {
   sound = document.getElementById(type);
   setSelected(type);
+  slider.value = 1;
 }
-
-var slider = document.getElementById("volume");
 
 slider.addEventListener("change", function() {
   sound.volume = slider.value;
