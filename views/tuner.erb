@@ -1,8 +1,11 @@
 <h1 style="text-align: center">Tuner/Pitch Detector</h1>
 <button onclick="toggleLiveInput()" class="ui button">Start tuning</button>
 <script src="js/tuner.js"></script>
+
 <div id="detector">
 			<div class="pitch"><span id="pitch">--</span>Hz</div>
 			<div class="note" style="margin-top: 80px"><span id="note">--</span></div>
 			<div id="sharpflat"><span id="detune_amt">--</span><span id="flat">cents &#9837;</span><span id="sharp">cents &#9839;</span></div>
 </div>
+
+<div id="lastPitch"></div>

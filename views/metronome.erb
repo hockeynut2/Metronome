@@ -6,7 +6,7 @@
 <button class="ui button" id="go" onclick="metronome()">Go</button>
   <button class="ui button" id="stop" onclick="stop()" style="margin-bottom: 50px">Stop</button></div>
 
-  <audio id="click1" src="sounds/click1.wav" autostart="false" ></audio>
+  <audio id="click" src="sounds/click.wav" autostart="false" ></audio>
   <audio id="tomtom" src="sounds/tomtom.wav" autostart="false" ></audio>
   <audio id="snare" src="sounds/snare.wav" autostart="false" ></audio>
   <audio id="kick" src="sounds/kick.wav" autostart="false" ></audio>
@@ -17,7 +17,7 @@
     <div class="default text">Click</div>
     <i class="dropdown icon"></i>
     <div class="menu">
-      <div class="item" onclick="changeSound('click1')">Click</div>
+      <div class="item" onclick="changeSound('click')">Click</div>
       <div class="item" onclick="changeSound('tomtom')">Tom Tom</div>
       <div class="item" onclick="changeSound('snare')">Snare</div>
       <div class="item" onclick="changeSound('kick')">Kick</div>

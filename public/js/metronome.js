@@ -36,3 +36,9 @@ function changeSound(type) {
   sound = document.getElementById(type);
   setSelected(type);
 }
+
+var slider = document.getElementById("volume");
+
+slider.addEventListener("change", function() {
+  sound.volume = slider.value;
+})

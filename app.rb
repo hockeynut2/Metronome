@@ -2,7 +2,7 @@ require 'bundler'
 Bundler.require
 
 get '/' do
-  erb :metronome
+  erb :metronome_V2
 end
 
 get '/tuner' do
