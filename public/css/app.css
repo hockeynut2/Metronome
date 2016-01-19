@@ -11,6 +11,7 @@
   border-radius: 8px;
   text-align: center;
   padding-top: 10px;
+  margin: auto;
 }
 
 #output {
@@ -24,6 +25,14 @@
 
 #sharp { display: none; }
 
-.flat #flat { display: inline; }
+.flat #flat {
+  display: inline;
+}
 
-.sharp #sharp { display: inline; }
+.sharp #sharp {
+  display: inline;
+}
+
+.ui.button {
+  margin: 10px;
+}
